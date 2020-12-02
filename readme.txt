@@ -32,15 +32,14 @@ The **event** shortcode accepts three parameters:
  * **slug** to select specific event.
  * **width** to set the size of the featured image.
  * **height** to set the size of the featured image.
- * **limit** to restrict the number of events to display.
  
-Shortcode usage is **[events category="webinars" width=150 height=150 limit=5]**; all parameters are optional and will use the defaults set via the settings page.
+Shortcode usage is **[event slug="december-2021" width=150 height=150]**; all parameters are optional and will use the defaults set via the settings page.
 
 The **events** shortcode accepts four parameters:
- * **Category** to restrict the output to the selected category.
- * **Width** to set the size of the featured image.
- * **Height** to set the size of the featured image.
- * **Limit** to restrict the number of events to display.
+ * **category** to restrict the output to the selected category.
+ * **width** to set the size of the featured image.
+ * **height** to set the size of the featured image.
+ * **limit** to restrict the number of events to display.
  
 Shortcode usage is **[events category="webinars" width=150 height=150 limit=5]**; all parameters are optional and will use the defaults set via the settings page.
 

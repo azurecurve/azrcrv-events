@@ -425,12 +425,12 @@ function azrcrv_e_display_options(){
 				</p>
 				
 				<p>
-					<?php printf(__('The shortcode for displaying multiple events is %s', 'events'), '<strong>[events category="webinars" limit=3 width=150 height=150]</strong>'); ?>
+					
+					<?php printf(__('The shortcode for displaying a single event is %s', 'events'), '<strong>[event slug="december-2021" width=100 height=100]</strong>'); ?>
 				</p>
 				
 				<p>
-					
-					<?php printf(__('The shortcode for displaying a single event is %s', 'events'), '<strong>[event slug="december-2021" width=100 height=100]</strong>'); ?>
+					<?php printf(__('The shortcode for displaying multiple events is %s', 'events'), '<strong>[events category="webinars" width=150 height=150 limit=3]</strong>'); ?>
 				</p>
 				
 				
