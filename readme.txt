@@ -1,12 +1,12 @@
 === Events ===
 
 Description:	Create events and display in shortcode or widget.
-Version:		1.0.0
+Version:		1.0.1
 Tags:			widget
 Author:			azurecurve
 Author URI:		https://development.azurecurve.co.uk/
 Plugin URI:		https://development.azurecurve.co.uk/classicpress-plugins/events/
-Download link:	https://github.com/azurecurve/azrcrv-events/releases/download/v1.0.0/azrcrv-events.zip
+Download link:	https://github.com/azurecurve/azrcrv-events/releases/download/v1.0.1/azrcrv-events.zip
 Donate link:	https://development.azurecurve.co.uk/support-development/
 Requires PHP:	5.6
 Requires:		1.0.0
@@ -56,9 +56,10 @@ Shortcode usage is **[events category="webinars" width=150 height=150 limit=5]**
 
 # Screenshots
 
-1. Create new announcement in the custom post type.
-2. Add widget to widget area and select category.
-3. Widget displayed on front end when announcement meets date criteria.
+1. Create new event in the custom post type.
+2. Add widget to widget area, select category and amend defaults if necessary.
+3. Widget displaying events in sidebar.
+4. Page showing output of events shortcode.
 
 == Frequently Asked Questions ==
 
@@ -74,6 +75,9 @@ This plugin is developed for ClassicPress, but will likely work on WordPress.
 
 # Changelog
 
+### [Version 1.0.1](https://github.com/azurecurve/azrcrv-events/releases/tag/v1.0.1)
+ * Update screenshots.
+ 
 ### [Version 1.0.0](https://github.com/azurecurve/azrcrv-events/releases/tag/v1.0.0)
  * Initial release.
 
