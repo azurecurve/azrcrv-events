@@ -28,7 +28,7 @@ In the options set defaults for the widget and shortcode.
 
 Multiple widgets can be created, each assigned to display a category; settings for title, image size and limit for number of events to list can be set per widget.
 
-The **event*** shortcode accepts three parameters:
+The **event** shortcode accepts three parameters:
  * **slug** to select specific event.
  * **width** to set the size of the featured image.
  * **height** to set the size of the featured image.
