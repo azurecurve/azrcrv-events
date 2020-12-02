@@ -1,0 +1,44 @@
+div.azrcrv-e-container{
+	display: block;
+}
+div.azrcrv-e-image{
+	float: left;
+	margin: 0 12px 12px 0;
+}
+div.azrcrv-e-details{
+}
+h3.azrcrv-e{
+	display: inline;
+	margin-top: 0;
+}
+p.azrcrv-e-dates{
+	font-weight: 700;
+	font-size: 1.2em;
+}
+p.azrcrv-e-excerpt{
+	font-style: oblique;
+	font-weight: 700;
+}
+div.azrcrv-e-widget-container{
+	display: block;
+}
+div.azrcrv-e-widget-image{
+	float: left;
+	margin: 0 12px 12px 0;
+}
+div.azrcrv-e-widget-details{
+}
+h3.azrcrv-e-widget{
+	display: inline;
+	margin-top: 0;
+}
+p.azrcrv-e-widget-dates{
+	font-weight: 700;
+	font-size: 1.2em;
+}
+p.azrcrv-e-widget-excerpt{
+	font-style: oblique;
+}
+p.azrcrv-e-clear{
+	clear: both;
+}
