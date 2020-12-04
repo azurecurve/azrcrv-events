@@ -3,7 +3,7 @@
  * ------------------------------------------------------------------------------
  * Plugin Name: Events
  * Description: Announce holidays, events, achievements and notable historical figures in a widget.
- * Version: 1.0.1
+ * Version: 1.1.0
  * Author: azurecurve
  * Author URI: https://development.azurecurve.co.uk/classicpress-plugins/
  * Plugin URI: https://development.azurecurve.co.uk/classicpress-plugins/azrcrv-events/
@@ -120,6 +120,7 @@ function azrcrv_e_get_option($option_name){
 											'height' => 100,
 											'limit' => 10,
 											'date-format' => 'm/d/Y',
+											'hide' => 0,
 										),
 						'shortcode' => array(
 												'category' => '',
@@ -132,10 +133,34 @@ function azrcrv_e_get_option($option_name){
 
 	$options = get_option($option_name, $defaults);
 
-	$options = wp_parse_args($options, $defaults);
+	$options = azrcrv_e_recursive_parse_args($options, $defaults);
+		
+	update_option('test1', $defaults);
+	update_option('test2', $options);
 
 	return $options;
 
+}
+
+/**
+ * Recursively parse options to merge with defaults.
+ *
+ * @since 1.1.0
+ *
+ */
+function azrcrv_e_recursive_parse_args( $args, $defaults ) {
+	$new_args = (array) $defaults;
+
+	foreach ( $args as $key => $value ) {
+		if ( is_array( $value ) && isset( $new_args[ $key ] ) ) {
+			$new_args[ $key ] = azrcrv_e_recursive_parse_args( $value, $new_args[ $key ] );
+		}
+		else {
+			$new_args[ $key ] = $value;
+		}
+	}
+
+	return $new_args;
 }
 
 /**
@@ -463,7 +488,7 @@ function azrcrv_e_display_options(){
 					<tr>
 						<th scope="row">
 							<label for="widget-intro-text">
-								<?php esc_html_e('Default Category', 'nearby'); ?>
+								<?php esc_html_e('Default Category', 'events'); ?>
 							</label>
 						</th>
 						<td>
@@ -527,6 +552,27 @@ function azrcrv_e_display_options(){
 					</tr>
 					
 					<tr>
+						<th scope="row">
+							<label for="widget-hide">
+								<?php esc_html_e('Hide widget?', 'events'); ?>
+							</label>
+						</th>
+						<td>
+							<fieldset>
+								<legend class="screen-reader-text">
+									<span>
+										<?php esc_html_e('Hide widget when no events found?', 'events'); ?>
+									</span>
+								</legend>
+								<label for="widget-hide">
+									<input name="widget-hide" type="checkbox" id="widget-hide" value="1" <?php checked('1', $options['widget']['hide']); ?> />
+									<?php esc_html_e('Hide widget when no events found.', 'events'); ?>
+								</label>
+							</fieldset>
+						</td>
+					</tr>
+					
+					<tr>
 						<th>
 							<h3><?php _e('Shortcode', 'events'); ?></h3>
 						</th>
@@ -535,7 +581,7 @@ function azrcrv_e_display_options(){
 					<tr>
 						<th scope="row">
 							<label for="shortcode-intro-text">
-								<?php esc_html_e('Default Category', 'nearby'); ?>
+								<?php esc_html_e('Default Category', 'events'); ?>
 							</label>
 						</th>
 						<td>
@@ -617,7 +663,7 @@ function azrcrv_e_display_options(){
 function azrcrv_e_save_options(){
 	// Check that user has proper security level
 	if (!current_user_can('manage_options')){
-		wp_die(esc_html__('You do not have permissions to perform this action', 'nearby'));
+		wp_die(esc_html__('You do not have permissions to perform this action', 'events'));
 	}
 	// Check that nonce field created in configuration form is present
 	if (! empty($_POST) && check_admin_referer('azrcrv-e', 'azrcrv-e-nonce')){
@@ -658,6 +704,13 @@ function azrcrv_e_save_options(){
 		$option_name = 'widget-date-format';
 		if (isset($_POST[$option_name])){
 			$options['widget']['date-format'] = sanitize_text_field($_POST[$option_name]);
+		}
+		
+		$option_name = 'widget-hide';
+		if (isset($_POST[$option_name])){
+			$options['widget']['hide'] = 1;
+		}else{
+			$options['widget']['hide'] = 0;
 		}
 		
 		$option_name = 'shortcode-category';
@@ -754,7 +807,7 @@ class azrcrv_e_register_widget extends WP_Widget {
 		
 		$intro_text = (!empty($instance['intro-text']) ? esc_html($instance['intro-text']) : esc_html($options['widget']['intro-text']));
 		
-		$category = (!empty($instance['category']) ? esc_attr($instance['category']) : '');
+		$category = (!empty($instance['category']) ? esc_attr($instance['category']) : esc_html($options['widget']['category']));
 		
 		$width = (!empty($instance['width']) ? esc_attr($instance['width']) : $options['widget']['width']);
 		
@@ -881,16 +934,16 @@ class azrcrv_e_register_widget extends WP_Widget {
 		extract($args);
 		
 		// display widget title
-		echo $before_widget;
-		echo $before_title;
+		$output = $before_widget;
+		$output .= $before_title;
 		$title = (!empty($instance['title']) ? esc_attr($instance['title']) : $options['widget']['title']);
-		echo apply_filters('widget_title', $title);
-		echo $after_title;
+		$output .= apply_filters('widget_title', $title);
+		$output .= $after_title;
 		
 		$intro_text = (!empty($instance['intro-text']) ? $instance['intro-text'] : '');
 		$date_format = (!empty($instance['date-format']) ? esc_attr($instance['date-format']) : $options['widget']['date-format']);
 		if (strlen($intro_text) > 0){
-			echo '<p>'.wp_kses($intro_text, wp_kses_allowed_html()).'</p>';
+			$output .= '<p>'.wp_kses($intro_text, wp_kses_allowed_html()).'</p>';
 		}
 		
 		$sql = azrcrv_e_create_upcoming_events_sql_statement($instance['category']);
@@ -912,34 +965,41 @@ class azrcrv_e_register_widget extends WP_Widget {
 				
 				$count += 1;
 				
-				echo '<div class="azrcrv-e-container-widget">';
+				$output .= '<div class="azrcrv-e-container-widget">';
 					$title = $event->post_title;
 					
 					// display widget body
 					if (has_post_thumbnail($event->ID)){
 						$image = wp_get_attachment_image(get_post_thumbnail_id($event->ID), array($instance['width'],$instance['height']),'', array('class' => "img-responsive alignleft", 'alt' => get_the_title()));
 						
-						echo '<div class="azrcrv-e-widget-image">'.$image.'</div>';
+						$output .= '<div class="azrcrv-e-widget-image">'.$image.'</div>';
 					}
 					
-					echo '<div class="azrcrv-e-widget-details">';
-						echo '<p><h3 class="azrcrv-e">'.$title.'</h3></p>';
+					$output .= '<div class="azrcrv-e-widget-details">';
+						$output .= '<p><h3 class="azrcrv-e">'.$title.'</h3></p>';
 						if ($event_details['start-date'] == $event_details['end-date']){
 							$end_date = '';
 						}else{
 							$end_date = '-'.date_format(date_create($event_details['end-date']), $date_format);
 						}
-						echo '<p class="azrcrv-e-widget-dates">'.date_format(date_create($event_details['start-date']),$date_format).$end_date.' '.$event_details['start-time'].'-'.$event_details['end-time'].'</p>';
-						echo '<p class="azrcrv-e-widget-excerpt">'.$event->post_excerpt.'</p>';
-					echo '</div>';
-				echo '</div>';
-				echo '<p class="azrcrv-e-clear" />';
+						$output .= '<p class="azrcrv-e-widget-dates">'.date_format(date_create($event_details['start-date']),$date_format).$end_date.' '.$event_details['start-time'].'-'.$event_details['end-time'].'</p>';
+						$output .= '<p class="azrcrv-e-widget-excerpt">'.$event->post_excerpt.'</p>';
+					$output .= '</div>';
+				$output .= '</div>';
+				$output .= '<p class="azrcrv-e-clear" />';
 			
 				if ($count == $instance['limit']){ break; }
 			}
 		}
+		if ($count == 0){
+			$output .= '<p>'.sprintf(__('No %s events found.', 'events'), '<em>'.$instance['category'].'</em>').'</p>';
+		}
 		// display widget footer
-		echo $after_widget;
+		$output .= $after_widget;
+		
+		if ($count >= 1 OR ($options['widget']['hide'] != 1 AND $count == 0)){
+			echo $output;
+		}
 	}
 }
 
@@ -1124,7 +1184,7 @@ function azrcrv_n_display_event($atts, $content = null){
 		$output .= '</div>';
 		$output .= '<p class="azrcrv-e-clear" />';
 	}else{
-		$output = sprintf(__('Event %s found.', 'events'), '<em>'.$slug.'</em>');
+		$output .= '<p>'.sprintf(__('No %s events found.', 'events'), '<em>'.$slug.'</em>').'</p>';
 	}
 	
 	return $output;
