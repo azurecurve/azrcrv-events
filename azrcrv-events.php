@@ -3,7 +3,7 @@
  * ------------------------------------------------------------------------------
  * Plugin Name: Events
  * Description: Announce holidays, events, achievements and notable historical figures in a widget.
- * Version: 1.1.0
+ * Version: 1.1.1
  * Author: azurecurve
  * Author URI: https://development.azurecurve.co.uk/classicpress-plugins/
  * Plugin URI: https://development.azurecurve.co.uk/classicpress-plugins/azrcrv-events/
@@ -134,9 +134,6 @@ function azrcrv_e_get_option($option_name){
 	$options = get_option($option_name, $defaults);
 
 	$options = azrcrv_e_recursive_parse_args($options, $defaults);
-		
-	update_option('test1', $defaults);
-	update_option('test2', $options);
 
 	return $options;
 
