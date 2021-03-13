@@ -43,6 +43,8 @@ The **events** shortcode accepts four parameters:
  
 Shortcode usage is **[events category="webinars" width=150 height=150 limit=5]**; all parameters are optional and will use the defaults set via the settings page.
 
+Integrates with [To Twitter](https://development.azurecurve.co.uk/classicpress-plugins/to-twitter/) from [azurecurve](https://development.azurecurve.co.uk/classicpress-plugins/) for automatic tweeting of announcement each time the announcement is made and a retweet after a specified amount of time.
+
 == Installation ==
 
 # Installation Instructions
