@@ -3,7 +3,7 @@
  * ------------------------------------------------------------------------------
  * Plugin Name: Events
  * Description: Announce holidays, events, achievements and notable historical figures in a widget.
- * Version: 1.2.0
+ * Version: 1.2.1
  * Author: azurecurve
  * Author URI: https://development.azurecurve.co.uk/classicpress-plugins/
  * Plugin URI: https://development.azurecurve.co.uk/classicpress-plugins/azrcrv-events/
@@ -1542,13 +1542,13 @@ function azrcrv_e_save_options(){
 		
 		$option_name = 'to-twitter-tweet-days-before';
 		if (isset($_POST[$option_name])){
-			$tweet_date = preg_replace("([^0-9-:-])", "", $_POST[$option_name]);
-			$options['to-twitter']['tweet-date'] = sanitize_text_field(intval($tweet_time));
+			$options['to-twitter']['tweet-days-before'] = sanitize_text_field(intval($_POST[$option_name]));
 		}
 		
 		$option_name = 'to-twitter-tweet-time';
 		if (isset($_POST[$option_name])){
-			$options['to-twitter']['tweet-time'] = sanitize_text_field($_POST[$option_name]);
+			$tweet_time = preg_replace("([^0-9-:-])", "", $_POST[$option_name]);
+			$options['to-twitter']['tweet-time'] = sanitize_text_field($tweet_time);
 		}
 		
 		$option_name = 'to-twitter-retweet';
@@ -1560,7 +1560,7 @@ function azrcrv_e_save_options(){
 		
 		$option_name = 'to-twitter-retweet-days-before';
 		if (isset($_POST[$option_name])){
-			$options['to-twitter']['retweet-date'] = sanitize_text_field(intval($_POST[$option_name]));
+			$options['to-twitter']['retweet-days-before'] = sanitize_text_field(intval($_POST[$option_name]));
 		}
 		
 		$option_name = 'to-twitter-retweet-time';
