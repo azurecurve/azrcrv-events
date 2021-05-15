@@ -3,7 +3,7 @@
  * ------------------------------------------------------------------------------
  * Plugin Name: Events
  * Description: Announce holidays, events, achievements and notable historical figures in a widget.
- * Version: 1.2.1
+ * Version: 1.3.0
  * Author: azurecurve
  * Author URI: https://development.azurecurve.co.uk/classicpress-plugins/
  * Plugin URI: https://development.azurecurve.co.uk/classicpress-plugins/azrcrv-events/
@@ -234,7 +234,7 @@ function azrcrv_e_create_cust_taxonomy_for_custom_post() {
 						'event-categories',
 						'event',
 						array(
-						'label' => __( 'Categories' ),
+						'label' => esc_html__( 'Categories' ),
 						'rewrite' => array( 'slug' => 'event-categories' ),
 						'hierarchical' => true,
 					)
@@ -303,7 +303,7 @@ function azrcrv_e_current_screen_callback($screen) {
  */ 
 function azrcrv_e_admin_post_excerpt_change_labels($translation, $original){
 	if ('Excerpt' == $original){
-		return __('Event Outline', 'events');
+		return esc_html__('Event Outline', 'events');
 	}else{
 		$pos = strpos($original, 'Excerpts are optional hand-crafted summaries of your');
 
@@ -345,7 +345,7 @@ function azrcrv_e_generate_event_dates_metabox(){
 		<table>
 			<tr>
 				<td>
-					<?php _e('Start Date: ', 'events'); ?>
+					<?php esc_html_e('Start Date: ', 'events'); ?>
 				</td>
 				<td>
 					<input type="date" id="start-date" name="start-date" value="<?php echo $event_dates['start-date']; ?>" required />
@@ -354,7 +354,7 @@ function azrcrv_e_generate_event_dates_metabox(){
 			
 			<tr>
 				<td>
-					<?php _e('Start Time: ', 'events'); ?>
+					<?php esc_html_e('Start Time: ', 'events'); ?>
 				</td>
 				<td>
 					<input type="time" id="start-time" name="start-time" value="<?php echo $event_dates['start-time']; ?>" required />
@@ -363,7 +363,7 @@ function azrcrv_e_generate_event_dates_metabox(){
 		
 			<tr>
 				<td>
-					<?php _e('End Time:', 'events'); ?>
+					<?php esc_html_e('End Time:', 'events'); ?>
 				</td>
 				<td>
 					<input type="time" id="end-time" name="end-time" value="<?php echo $event_dates['end-time']; ?>" required />
@@ -372,7 +372,7 @@ function azrcrv_e_generate_event_dates_metabox(){
 		
 			<tr>
 				<td>
-					<?php _e('End Date:', 'events'); ?>
+					<?php esc_html_e('End Date:', 'events'); ?>
 				</td>
 				<td>
 					<input type="date" id="end-date" name="end-date" value="<?php echo $event_dates['end-date']; ?>" required />
@@ -381,7 +381,7 @@ function azrcrv_e_generate_event_dates_metabox(){
 		</table>
 		<p>
 			<?php
-				echo '<em>'.__('For a one day event, do not set an end date.', 'events').'</em>';
+				echo '<em>'.esc_html__('For a one day event, do not set an end date.', 'events').'</em>';
 			?>
 		</p>
 	</fieldset>
@@ -479,7 +479,7 @@ function azrcrv_e_render_tweet_metabox() {
 								>
 							</p>
 							<p>
-								<?php printf(__('To regenerate tweet blank the field and update post.', 'events'), '%s'); ?>
+								<?php printf(esc_html__('To regenerate tweet blank the field and update post.', 'events'), '%s'); ?>
 							</p>
 		
 							<p>
@@ -505,7 +505,7 @@ function azrcrv_e_render_tweet_metabox() {
 								
 								<div style="width: 100%; display: block; ">
 									<div style="width: 100%; display: block; padding-bottom: 12px; ">
-										<?php _e('Select up to four images to include with tweet; if the <em>Use Featured Image</em> option is marked and a featured image set, only the first three media images from below will be used.', 'events'); ?>
+										<?php esc_html_e('Select up to four images to include with tweet; if the <em>Use Featured Image</em> option is marked and a featured image set, only the first three media images from below will be used.', 'events'); ?>
 									</div>
 									<?php
 										foreach ($tweet_media AS $media_key => $media){
@@ -513,8 +513,8 @@ function azrcrv_e_render_tweet_metabox() {
 											echo '<div style="float: left; width: 170px; text-align: center; ">';
 												echo '<img src="'.$media['image'].'" id="tweet-image-'.$key.'" style="width: 160px;"><br />';
 												echo '<input type="hidden" name="tweet-selected-image-'.$key.'" id="tweet-selected-image-'.$key.'" value="'.$media['value'].'" class="regular-text" />';
-												echo '<input type="button" id="azrcrv-e-upload-image-'.$key.'" class="button upload" value="'.__('Upload', 'events').'" />&nbsp;';
-												echo '<input type="button" id="azrcrv-e-remove-image-'.$key.'" class="button remove" value="'.__( 'Remove', 'events').'" />';
+												echo '<input type="button" id="azrcrv-e-upload-image-'.$key.'" class="button upload" value="'.esc_html__('Upload', 'events').'" />&nbsp;';
+												echo '<input type="button" id="azrcrv-e-remove-image-'.$key.'" class="button remove" value="'.esc_html__( 'Remove', 'events').'" />';
 											echo '</div>';
 										}
 									?>
@@ -654,7 +654,7 @@ function azrcrv_e_render_tweet_history_metabox() {
 							<p>
 							<?php
 							if(metadata_exists('post', $post->ID, '_azrcrv_tt_tweet_history')) {
-								echo '<strong>'.__('Previous Tweets', 'events').'</strong><br />';
+								echo '<strong>'.esc_html__('Previous Tweets', 'events').'</strong><br />';
 								foreach(array_reverse(get_post_meta($post->ID, '_azrcrv_tt_tweet_history', true )) as $key => $tweet){
 									if (is_array($tweet)){ $tweet_detail = $tweet['tweet']; }else{ $tweet_detail = $tweet; }
 									
@@ -754,7 +754,7 @@ function azrcrv_e_generate_to_twitter_sidebar_metabox(){
 		}
 		echo '<p>
 				<label>
-					<input type="checkbox" name="use-featured-image" '.$checked.' />  '.__('Use featured image as tweet media image 1?', 'events').'
+					<input type="checkbox" name="use-featured-image" '.$checked.' />  '.esc_html__('Use featured image as tweet media image 1?', 'events').'
 				</label>';
 		echo '</p>';
 		
@@ -763,16 +763,16 @@ function azrcrv_e_generate_to_twitter_sidebar_metabox(){
 		}else{
 			$checked = '';
 		}
-		echo '<p><label><input type="checkbox" name="tweet" '.$checked.' />  '.__('Tweet event?', 'events').'</label></p>
+		echo '<p><label><input type="checkbox" name="tweet" '.$checked.' />  '.esc_html__('Tweet event?', 'events').'</label></p>
 		
 		<p>
-			'.__('Tweet Days Before: ', 'events').'
+			'.esc_html__('Tweet Days Before: ', 'events').'
 			
 			<input type="number" min=1 step=1 id="tweet-days-before" name="tweet-days-before" value="'.esc_html($tweet_days_before).'" required class="small-text" />
 		</p>
 		
 		<p>
-			'.__('Tweet Time: ', 'events').'
+			'.esc_html__('Tweet Time: ', 'events').'
 			
 			<input type="time" id="tweet-time" name="tweet-time" value="'.esc_html($tweet_time).'" required />
 		</p>';
@@ -782,16 +782,16 @@ function azrcrv_e_generate_to_twitter_sidebar_metabox(){
 		}else{
 			$checked = '';
 		}
-		echo '<p><label><input type="checkbox" name="retweet" '.$checked.' />  '.__('Retweet event?', 'events').'</label></p>
+		echo '<p><label><input type="checkbox" name="retweet" '.$checked.' />  '.esc_html__('Retweet event?', 'events').'</label></p>
 		
 		<p>
-			'.__('Retweet Days Before: ', 'events').'
+			'.esc_html__('Retweet Days Before: ', 'events').'
 			
 			<input type="number" min=0 step=1 id="retweet-days-before" name="retweet-days-before" value="'.esc_html($retweet_days_before).'" required class="small-text" />
 		</p>
 		
 		<p>
-			'.__('Retweet Time: ', 'events').'
+			'.esc_html__('Retweet Time: ', 'events').'
 			
 			<input type="time" id="retweet-time" name="retweet-time" value="'.esc_html($retweet_time).'" required />
 		</p>';
@@ -917,14 +917,6 @@ function azrcrv_e_perform_tweet_event($cron_type, $post_id){
 		$prefix = '';
 	}
 	
-	if (function_exists('azrcrv_urls_get_custom_shortlink')){
-		$url = azrcrv_urls_get_custom_shortlink($post_id);
-	}else{
-		$url = get_permalink($post_id);
-	}
-	
-	$post_tweet = str_replace('%u', $url, $post_tweet);
-	
 	$post_tweet = $prefix.$post_tweet; //text for your tweet.
 	
 	$parameters = array("status" => $post_tweet);
@@ -981,7 +973,7 @@ function azrcrv_e_add_plugin_action_link($links, $file){
 	}
 
 	if ($file == $this_plugin){
-		$settings_link = '<a href="'.admin_url('admin.php?page=azrcrv-e').'"><img src="'.plugins_url('/pluginmenu/images/Favicon-16x16.png', __FILE__).'" style="padding-top: 2px; margin-right: -5px; height: 16px; width: 16px;" alt="azurecurve" />'.esc_html__('Settings' ,'events').'</a>';
+		$settings_link = '<a href="'.admin_url('admin.php?page=azrcrv-e').'"><img src="'.plugins_url('/pluginmenu/images/logo.svg', __FILE__).'" style="padding-top: 2px; margin-right: -5px; height: 16px; width: 16px;" alt="azurecurve" />'.esc_html__('Settings' ,'events').'</a>';
 		array_unshift($links, $settings_link);
 	}
 
@@ -1036,7 +1028,12 @@ function azrcrv_e_display_options(){
 	?>
 	<div id="azrcrv-e-general" class="wrap azrcrv-e">
 		<fieldset>
-			<h1><?php echo esc_html(get_admin_page_title()); ?></h1>
+			<h1>
+				<?php
+					echo '<a href="https://development.azurecurve.co.uk/classicpress-plugins/"><img src="'.plugins_url('/pluginmenu/images/logo.svg', __FILE__).'" style="padding-right: 6px; height: 20px; width: 20px;" alt="azurecurve" /></a>';
+					esc_html_e(get_admin_page_title());
+				?>
+			</h1>
 			<?php if(isset($_GET['settings-updated'])){ ?>
 				<div class="notice notice-success is-dismissible">
 					<p><strong><?php esc_html_e('Settings have been saved.', 'events'); ?></strong></p>
@@ -1051,16 +1048,16 @@ function azrcrv_e_display_options(){
 				<?php wp_nonce_field('azrcrv-e', 'azrcrv-e-nonce'); ?>
 				
 				<p>
-					<?php printf(__('%s allows events to be created and displayed in a widget or using a shortcode.', 'events'), 'Events'); ?>
+					<?php printf(esc_html__('%s allows events to be created and displayed in a widget or using a shortcode.', 'events'), 'Events'); ?>
 				</p>
 				
 				<p>
 					
-					<?php printf(__('The shortcode for displaying a single event is %s', 'events'), '<strong>[event slug="december-2021" width=100 height=100]</strong>'); ?>
+					<?php printf(esc_html__('The shortcode for displaying a single event is %s', 'events'), '<strong>[event slug="december-2021" width=100 height=100]</strong>'); ?>
 				</p>
 				
 				<p>
-					<?php printf(__('The shortcode for displaying multiple events is %s', 'events'), '<strong>[events category="webinars" width=150 height=150 limit=3]</strong>'); ?>
+					<?php printf(esc_html__('The shortcode for displaying multiple events is %s', 'events'), '<strong>[events category="webinars" width=150 height=150 limit=3]</strong>'); ?>
 				</p>
 				
 				<?php
@@ -1077,9 +1074,9 @@ function azrcrv_e_display_options(){
 					}
 				?>
 				<h2 class="nav-tab-wrapper nav-tab-wrapper-azrcrv-e">
-					<a class="nav-tab <?php echo $tab1active; ?>" data-item=".tabs-1" href="#tabs-1"><?php _e('Widget', 'events') ?></a>
-					<a class="nav-tab" data-item=".tabs-2" href="#tabs-2"><?php _e('Shortcode', 'events') ?></a>
-					<a class="nav-tab <?php echo $tab3active; ?>" data-item=".tabs-3" href="#tabs-3"><?php _e('To Twitter Integration', 'events') ?></a>
+					<a class="nav-tab <?php echo $tab1active; ?>" data-item=".tabs-1" href="#tabs-1"><?php esc_html_e('Widget', 'events') ?></a>
+					<a class="nav-tab" data-item=".tabs-2" href="#tabs-2"><?php esc_html_e('Shortcode', 'events') ?></a>
+					<a class="nav-tab <?php echo $tab3active; ?>" data-item=".tabs-3" href="#tabs-3"><?php esc_html_e('To Twitter Integration', 'events') ?></a>
 				</h2>
 				<div>
 					<div class="azrcrv_e_tabs tabs-1 <?php echo $tab1visibility; ?>">
@@ -1088,13 +1085,13 @@ function azrcrv_e_display_options(){
 							
 							<tr>
 								<th>
-									<h3><?php _e('Widget', 'events'); ?></h3>
+									<h3><?php esc_html_e('Widget', 'events'); ?></h3>
 								</th>
 							</tr>
 							
 							<tr>
 								<th scope="row"><label for="widget-title">
-									<?php _e('Title', 'events'); ?></label>
+									<?php esc_html_e('Title', 'events'); ?></label>
 								</th>
 								<td>
 									<input name="widget-title" type="text" id="widget-title" value="<?php if (strlen($options['widget']['title']) > 0){ echo sanitize_text_field($options['widget']['title']); } ?>" class="regular-text" />
@@ -1103,7 +1100,7 @@ function azrcrv_e_display_options(){
 							
 							<tr>
 								<th scope="row"><label for="widget-intro-text">
-									<?php _e('Intro Text', 'events'); ?></label>
+									<?php esc_html_e('Intro Text', 'events'); ?></label>
 								</th>
 								<td>
 									<input name="widget-intro-text" type="text" id="widget-intro-text" value="<?php if (strlen($options['widget']['intro-text']) > 0){ echo wp_kses($options['widget']['intro-text'], wp_kses_allowed_html()); } ?>" class="large-text" />
@@ -1113,7 +1110,7 @@ function azrcrv_e_display_options(){
 							<tr>
 								<th scope="row">
 									<label for="widget-intro-text">
-										<?php _e('Default Category', 'events'); ?>
+										<?php esc_html_e('Default Category', 'events'); ?>
 									</label>
 								</th>
 								<td>
@@ -1142,7 +1139,7 @@ function azrcrv_e_display_options(){
 							
 							<tr>
 								<th scope="row"><label for="widget-width">
-									<?php _e('Width', 'events'); ?></label>
+									<?php esc_html_e('Width', 'events'); ?></label>
 								</th>
 								<td>
 									<input name="widget-width" type="number" min="1" id="widget-width" value="<?php if (strlen($options['widget']['width']) > 0){ echo sanitize_text_field($options['widget']['width']); } ?>" class="small-text" />
@@ -1151,7 +1148,7 @@ function azrcrv_e_display_options(){
 							
 							<tr>
 								<th scope="row"><label for="widget-height">
-									<?php _e('Height', 'events'); ?></label>
+									<?php esc_html_e('Height', 'events'); ?></label>
 								</th>
 								<td>
 									<input name="widget-height" type="number" min="1" id="widget-height" value="<?php if (strlen($options['widget']['height']) > 0){ echo sanitize_text_field($options['widget']['height']); } ?>" class="small-text" />
@@ -1160,7 +1157,7 @@ function azrcrv_e_display_options(){
 							
 							<tr>
 								<th scope="row"><label for="widget-limit">
-									<?php _e('Limit', 'events'); ?></label>
+									<?php esc_html_e('Limit', 'events'); ?></label>
 								</th>
 								<td>
 									<input name="widget-limit" type="number" min="1" id="widget-limit" value="<?php if (strlen($options['widget']['limit']) > 0){ echo sanitize_text_field($options['widget']['limit']); } ?>" class="small-text" />
@@ -1169,7 +1166,7 @@ function azrcrv_e_display_options(){
 							
 							<tr>
 								<th scope="row"><label for="widget-date-format">
-									<?php _e('Date Format', 'events'); ?></label>
+									<?php esc_html_e('Date Format', 'events'); ?></label>
 								</th>
 								<td>
 									<input name="widget-date-format" type="text" id="widget-date-format" value="<?php if (strlen($options['widget']['date-format']) > 0){ echo sanitize_text_field($options['widget']['date-format']); } ?>" class="short-text" />
@@ -1179,19 +1176,19 @@ function azrcrv_e_display_options(){
 							<tr>
 								<th scope="row">
 									<label for="widget-hide">
-										<?php _e('Hide widget?', 'events'); ?>
+										<?php esc_html_e('Hide widget?', 'events'); ?>
 									</label>
 								</th>
 								<td>
 									<fieldset>
 										<legend class="screen-reader-text">
 											<span>
-												<?php _e('Hide widget when no events found?', 'events'); ?>
+												<?php esc_html_e('Hide widget when no events found?', 'events'); ?>
 											</span>
 										</legend>
 										<label for="widget-hide">
 											<input name="widget-hide" type="checkbox" id="widget-hide" value="1" <?php checked('1', $options['widget']['hide']); ?> />
-											<?php _e('Hide widget when no events found.', 'events'); ?>
+											<?php esc_html_e('Hide widget when no events found.', 'events'); ?>
 										</label>
 									</fieldset>
 								</td>
@@ -1205,14 +1202,14 @@ function azrcrv_e_display_options(){
 							
 							<tr>
 								<th>
-									<h3><?php _e('Shortcode', 'events'); ?></h3>
+									<h3><?php esc_html_e('Shortcode', 'events'); ?></h3>
 								</th>
 							</tr>
 									
 							<tr>
 								<th scope="row">
 									<label for="shortcode-intro-text">
-										<?php _e('Default Category', 'events'); ?>
+										<?php esc_html_e('Default Category', 'events'); ?>
 									</label>
 								</th>
 								<td>
@@ -1241,7 +1238,7 @@ function azrcrv_e_display_options(){
 							
 							<tr>
 								<th scope="row"><label for="shortcode-width">
-									<?php _e('Width', 'events'); ?></label>
+									<?php esc_html_e('Width', 'events'); ?></label>
 								</th>
 								<td>
 									<input name="shortcode-width" type="number" min="1" id="shortcode-width" value="<?php if (strlen($options['shortcode']['width']) > 0){ echo sanitize_text_field($options['shortcode']['width']); } ?>" class="small-text" />
@@ -1250,7 +1247,7 @@ function azrcrv_e_display_options(){
 							
 							<tr>
 								<th scope="row"><label for="shortcode-height">
-									<?php _e('Height', 'events'); ?></label>
+									<?php esc_html_e('Height', 'events'); ?></label>
 								</th>
 								<td>
 									<input name="shortcode-height" type="number" min="1" id="shortcode-height" value="<?php if (strlen($options['shortcode']['height']) > 0){ echo sanitize_text_field($options['shortcode']['height']); } ?>" class="small-text" />
@@ -1259,7 +1256,7 @@ function azrcrv_e_display_options(){
 							
 							<tr>
 								<th scope="row"><label for="shortcode-limit">
-									<?php _e('Limit', 'events'); ?></label>
+									<?php esc_html_e('Limit', 'events'); ?></label>
 								</th>
 								<td>
 									<input name="shortcode-limit" type="number" min="1" id="shortcode-limit" value="<?php if (strlen($options['shortcode']['limit']) > 0){ echo sanitize_text_field($options['shortcode']['limit']); } ?>" class="small-text" />
@@ -1268,7 +1265,7 @@ function azrcrv_e_display_options(){
 							
 							<tr>
 								<th scope="row"><label for="shortcode-date-format">
-									<?php _e('Date Format', 'events'); ?></label>
+									<?php esc_html_e('Date Format', 'events'); ?></label>
 								</th>
 								<td>
 									<input name="shortcode-date-format" type="text" id="shortcode-date-format" value="<?php if (strlen($options['shortcode']['date-format']) > 0){ echo sanitize_text_field($options['shortcode']['date-format']); } ?>" class="short-text" />
@@ -1285,7 +1282,7 @@ function azrcrv_e_display_options(){
 							<tr>
 								<th scope="row">
 									<label for="to-twitter-integration">
-										<?php _e('Enable integration', 'widget-announcements'); ?>
+										<?php esc_html_e('Enable integration', 'widget-announcements'); ?>
 									</label>
 								</th>
 								<td>
@@ -1304,72 +1301,72 @@ function azrcrv_e_display_options(){
 								<tr>
 									<th scope="row">
 										<label for="to-twitter-tweet">
-											<?php _e('Tweet', 'events'); ?>
+											<?php esc_html_e('Tweet', 'events'); ?>
 										</label>
 									</th>
 									<td>
-										<label for="to-twitter-tweet"><input name="to-twitter-tweet" type="checkbox" id="to-twitter-tweet" value="1" <?php checked('1', $options['to-twitter']['tweet']); ?> /><?php _e('Send tweet at below time?', 'events'); ?></label>
+										<label for="to-twitter-tweet"><input name="to-twitter-tweet" type="checkbox" id="to-twitter-tweet" value="1" <?php checked('1', $options['to-twitter']['tweet']); ?> /><?php esc_html_e('Send tweet at below time?', 'events'); ?></label>
 									</td>
 								</tr>
 								
 								<tr>
 									<th scope="row">
 										<label for="to-twitter-tweet-days-before">
-											<?php _e('Tweet <em>n</em> Days Before', 'events'); ?>
+											<?php esc_html_e('Tweet <em>n</em> Days Before', 'events'); ?>
 										</label>
 									</th>
 									<td>										
-										<input type="number" id="to-twitter-tweet-days-before" name="to-twitter-tweet-days-before" value="<?php _e($options['to-twitter']['tweet-days-before']); ?>" required class="small-text" />
+										<input type="number" id="to-twitter-tweet-days-before" name="to-twitter-tweet-days-before" value="<?php esc_html_e($options['to-twitter']['tweet-days-before']); ?>" required class="small-text" />
 									</td>
 								</tr>
 								
 								<tr>
 									<th scope="row">
 										<label for="to-twitter-tweet-time">
-											<?php _e('Tweet Time', 'events'); ?>
+											<?php esc_html_e('Tweet Time', 'events'); ?>
 										</label>
 									</th>
 									<td>										
-										<input type="time" id="to-twitter-tweet-time" name="to-twitter-tweet-time" value="<?php _e($options['to-twitter']['tweet-time']); ?>" required />
+										<input type="time" id="to-twitter-tweet-time" name="to-twitter-tweet-time" value="<?php esc_html_e($options['to-twitter']['tweet-time']); ?>" required />
 									</td>
 								</tr>
 								
 								<tr>
 									<th scope="row">
 										<label for="to-twitter-retweet">
-											<?php _e('Reweet', 'events'); ?>
+											<?php esc_html_e('Reweet', 'events'); ?>
 										</label>
 									</th>
 									<td>
-										<label for="to-twitter-retweet"><input name="to-twitter-retweet" type="checkbox" id="to-twitter-retweet" value="1" <?php checked('1', $options['to-twitter']['retweet']); ?> /><?php _e('Send retweet at below time?', 'events'); ?></label>
+										<label for="to-twitter-retweet"><input name="to-twitter-retweet" type="checkbox" id="to-twitter-retweet" value="1" <?php checked('1', $options['to-twitter']['retweet']); ?> /><?php esc_html_e('Send retweet at below time?', 'events'); ?></label>
 									</td>
 								</tr>
 								
 								<tr>
 									<th scope="row">
 										<label for="to-twitter-retweet-days-before">
-											<?php _e('Retweet <em>n</em> Days Before', 'events'); ?>
+											<?php esc_html_e('Retweet <em>n</em> Days Before', 'events'); ?>
 										</label>
 									</th>
 									<td>										
-										<input type="number" id="to-twitter-retweet-days-before" name="to-twitter-retweet-days-before" value="<?php _e($options['to-twitter']['retweet-days-before']); ?>" required class="small-text" />
+										<input type="number" id="to-twitter-retweet-days-before" name="to-twitter-retweet-days-before" value="<?php esc_html_e($options['to-twitter']['retweet-days-before']); ?>" required class="small-text" />
 									</td>
 								</tr>
 								
 								<tr>
 									<th scope="row">
 										<label for="to-twitter-retweet-time">
-											<?php _e('Tweet Time', 'events'); ?>
+											<?php esc_html_e('Tweet Time', 'events'); ?>
 										</label>
 									</th>
 									<td>										
-										<input type="time" id="to-twitter-retweet-time" name="to-twitter-retweet-time" value="<?php _e($options['to-twitter']['retweet-time']); ?>" required />
+										<input type="time" id="to-twitter-retweet-time" name="to-twitter-retweet-time" value="<?php esc_html_e($options['to-twitter']['retweet-time']); ?>" required />
 									</td>
 								</tr>
 								
 								<tr>
 									<th scope="row"><label for="to-twitter-retweet-prefix">
-										<?php _e('Retweet Prefix', 'events'); ?></label>
+										<?php esc_html_e('Retweet Prefix', 'events'); ?></label>
 									</th>
 									<td>
 										<input name="to-twitter-retweet-prefix" type="text" id="to-twitter-retweet-prefix" value="<?php if (strlen($options['to-twitter']['retweet-prefix']) > 0){ echo sanitize_text_field($options['to-twitter']['retweet-prefix']); } ?>" class="regular-text" />
@@ -1402,7 +1399,7 @@ function azrcrv_e_display_options(){
 					</div>
 				</div>
 				
-				<input type="submit" value="<? _e('Save Changes', 'events'); ?>" class="button-primary"/>
+				<input type="submit" value="<? esc_html_e('Save Changes', 'events'); ?>" class="button-primary"/>
 				
 			</form>
 		</fieldset>
@@ -1414,7 +1411,7 @@ function azrcrv_e_display_options(){
 		</p>
 		<p>
 			<label for="additional-plugins">
-				<?php printf(__('This plugin integrates with the following plugins from %s:', 'events'), '<a href="https://development.azurecurve.co.uk/classicpress-plugins/">azurecurve</a>'); ?>
+				<?php printf(esc_html__('This plugin integrates with the following plugins from %s:', 'events'), '<a href="https://development.azurecurve.co.uk/classicpress-plugins/">azurecurve</a>'); ?>
 			</label>
 			<ul class='azrcrv-plugin-index'>
 				<li>
@@ -1781,7 +1778,7 @@ class azrcrv_e_register_widget extends WP_Widget {
 		<p>
 			<label for="<?php echo 
 						$this->get_field_id('title'); ?>">
-			<?php _e('Title:', 'events'); ?>&nbsp;			
+			<?php esc_html_e('Title:', 'events'); ?>&nbsp;			
 			<input type="text" id="<?php echo $this->get_field_id('title'); ?>" name="<?php echo $this->get_field_name('title'); ?>" value="<?php echo $title; ?>" />			
 			</label>
 		</p> 
@@ -1789,7 +1786,7 @@ class azrcrv_e_register_widget extends WP_Widget {
 		<p>
 			<label for="<?php echo 
 						$this->get_field_name('intro-text'); ?>">
-			<?php _e('Intro Text:', 'events'); ?>&nbsp;			
+			<?php esc_html_e('Intro Text:', 'events'); ?>&nbsp;			
 			<input type="text" id="<?php echo $this->get_field_name('intro-text'); ?>" name="<?php echo $this->get_field_name('intro-text'); ?>" value="<?php echo $intro_text; ?>" />			
 			</label>
 		</p> 
@@ -1797,7 +1794,7 @@ class azrcrv_e_register_widget extends WP_Widget {
 		<p>
 			<label for="<?php echo 
 						$this->get_field_name('category'); ?>">
-			<?php _e('Category:', 'events');
+			<?php esc_html_e('Category:', 'events');
 			
 			echo '&nbsp;';
 			
@@ -1826,7 +1823,7 @@ class azrcrv_e_register_widget extends WP_Widget {
 		<p>
 			<label for="<?php echo 
 						$this->get_field_name('width'); ?>">
-			<?php _e('Width:', 'events'); ?>&nbsp;			
+			<?php esc_html_e('Width:', 'events'); ?>&nbsp;			
 			<input type="number" id="<?php echo $this->get_field_name('width'); ?>" name="<?php echo $this->get_field_name('width'); ?>" class="small-text" value="<?php echo $width; ?>" />
 			</label>
 		</p>
@@ -1834,7 +1831,7 @@ class azrcrv_e_register_widget extends WP_Widget {
 		<p>
 			<label for="<?php echo 
 						$this->get_field_name('height'); ?>">
-			<?php _e('Height:', 'events'); ?>&nbsp;			
+			<?php esc_html_e('Height:', 'events'); ?>&nbsp;			
 			<input type="number" id="<?php echo $this->get_field_name('height'); ?>" name="<?php echo $this->get_field_name('height'); ?>" class="small-text" value="<?php echo $height; ?>" />
 			</label>
 		</p>
@@ -1842,7 +1839,7 @@ class azrcrv_e_register_widget extends WP_Widget {
 		<p>
 			<label for="<?php echo 
 						$this->get_field_name('limit'); ?>">
-			<?php _e('Limit:', 'events'); ?>&nbsp;			
+			<?php esc_html_e('Limit:', 'events'); ?>&nbsp;			
 			<input type="number" id="<?php echo $this->get_field_name('limit'); ?>" name="<?php echo $this->get_field_name('limit'); ?>" class="small-text" value="<?php echo $limit; ?>" />
 			</label>
 		</p> 
@@ -1850,7 +1847,7 @@ class azrcrv_e_register_widget extends WP_Widget {
 		<p>
 			<label for="<?php echo 
 						$this->get_field_name('date-format'); ?>">
-			<?php _e('Date Format:', 'events'); ?>&nbsp;			
+			<?php esc_html_e('Date Format:', 'events'); ?>&nbsp;			
 			<input type="text" id="<?php echo $this->get_field_name('date-format'); ?>" name="<?php echo $this->get_field_name('date-format'); ?>" value="<?php echo $date_format; ?>" />
 			</label>
 		</p> 
@@ -1952,7 +1949,7 @@ class azrcrv_e_register_widget extends WP_Widget {
 			}
 		}
 		if ($count == 0){
-			$output .= '<p>'.sprintf(__('No %s events found.', 'events'), '<em>'.$instance['category'].'</em>').'</p>';
+			$output .= '<p>'.sprintf(esc_html__('No %s events found.', 'events'), '<em>'.$instance['category'].'</em>').'</p>';
 		}
 		// display widget footer
 		$output .= $after_widget;
@@ -2075,7 +2072,7 @@ function azrcrv_n_display_events($atts, $content = null){
 		}
 	}
 	if (strlen($output) == 0){
-		$output = sprintf(__('No events found for category %s', 'events'), '<em>'.$category.'</em>');
+		$output = sprintf(esc_html__('No events found for category %s', 'events'), '<em>'.$category.'</em>');
 	}
 	
 	return $output;
@@ -2144,7 +2141,7 @@ function azrcrv_n_display_event($atts, $content = null){
 		$output .= '</div>';
 		$output .= '<p class="azrcrv-e-clear" />';
 	}else{
-		$output .= '<p>'.sprintf(__('No %s events found.', 'events'), '<em>'.$slug.'</em>').'</p>';
+		$output .= '<p>'.sprintf(esc_html__('No %s events found.', 'events'), '<em>'.$slug.'</em>').'</p>';
 	}
 	
 	return $output;
