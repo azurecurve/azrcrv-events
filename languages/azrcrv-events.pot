@@ -1,0 +1,372 @@
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Events\n"
+"POT-Creation-Date: 2021-12-27 17:53+0000\n"
+"PO-Revision-Date: 2019-02-24 18:50+0000\n"
+"Last-Translator: \n"
+"Language-Team: translate@azurecurve.co.uk\n"
+"Language: en_US\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 3.0.1\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-KeywordsList: __;_e;esc_html__;esc_html_e\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: azrcrv-events.php:237
+msgid "Categories"
+msgstr ""
+
+#: azrcrv-events.php:255 azrcrv-events.php:1005
+msgid "Events"
+msgstr ""
+
+#: azrcrv-events.php:256
+msgid "Event"
+msgstr ""
+
+#: azrcrv-events.php:257
+msgid "Add New"
+msgstr ""
+
+#: azrcrv-events.php:258
+msgid "Add New Event"
+msgstr ""
+
+#: azrcrv-events.php:259
+msgid "Edit"
+msgstr ""
+
+#: azrcrv-events.php:260
+msgid "Edit Event"
+msgstr ""
+
+#: azrcrv-events.php:261
+msgid "New Event"
+msgstr ""
+
+#: azrcrv-events.php:262
+msgid "View"
+msgstr ""
+
+#: azrcrv-events.php:263
+msgid "View Event"
+msgstr ""
+
+#: azrcrv-events.php:264
+msgid "Search Event"
+msgstr ""
+
+#: azrcrv-events.php:265
+msgid "No Event found"
+msgstr ""
+
+#: azrcrv-events.php:266
+msgid "No Event found in Trash"
+msgstr ""
+
+#: azrcrv-events.php:267
+msgid "Parent Event"
+msgstr ""
+
+#: azrcrv-events.php:306
+msgid "Event Outline"
+msgstr ""
+
+#: azrcrv-events.php:325
+msgid "Event Dates"
+msgstr ""
+
+#: azrcrv-events.php:348
+msgid "Start Date: "
+msgstr ""
+
+#: azrcrv-events.php:357
+msgid "Start Time: "
+msgstr ""
+
+#: azrcrv-events.php:366
+msgid "End Time:"
+msgstr ""
+
+#: azrcrv-events.php:375
+msgid "End Date:"
+msgstr ""
+
+#: azrcrv-events.php:384
+msgid "For a one day event, do not set an end date."
+msgstr ""
+
+#: azrcrv-events.php:482
+msgid "To regenerate tweet blank the field and update post."
+msgstr ""
+
+#: azrcrv-events.php:508
+msgid ""
+"Select up to four images to include with tweet; if the <em>Use Featured "
+"Image</em> option is marked and a featured image set, only the first three "
+"media images from below will be used."
+msgstr ""
+
+#: azrcrv-events.php:516
+msgid "Upload"
+msgstr ""
+
+#: azrcrv-events.php:517
+msgid "Remove"
+msgstr ""
+
+#: azrcrv-events.php:657
+msgid "Previous Tweets"
+msgstr ""
+
+#: azrcrv-events.php:707
+msgid "Autopost Tweet"
+msgstr ""
+
+#: azrcrv-events.php:757
+msgid "Use featured image as tweet media image 1?"
+msgstr ""
+
+#: azrcrv-events.php:766
+msgid "Tweet event?"
+msgstr ""
+
+#: azrcrv-events.php:769
+msgid "Tweet Days Before: "
+msgstr ""
+
+#: azrcrv-events.php:775
+msgid "Tweet Time: "
+msgstr ""
+
+#: azrcrv-events.php:785
+msgid "Retweet event?"
+msgstr ""
+
+#: azrcrv-events.php:788
+msgid "Retweet Days Before: "
+msgstr ""
+
+#: azrcrv-events.php:794
+msgid "Retweet Time: "
+msgstr ""
+
+#: azrcrv-events.php:976 azrcrv-events.php:995
+msgid "Settings"
+msgstr ""
+
+#: azrcrv-events.php:994 azrcrv-events.php:1004
+msgid "Events Settings"
+msgstr ""
+
+#: azrcrv-events.php:1020
+msgid "You do not have sufficient permissions to access this page."
+msgstr ""
+
+#: azrcrv-events.php:1039
+msgid "Settings have been saved."
+msgstr ""
+
+#: azrcrv-events.php:1051
+#, php-format
+msgid ""
+"%s allows events to be created and displayed in a widget or using a "
+"shortcode."
+msgstr ""
+
+#: azrcrv-events.php:1056
+#, php-format
+msgid "The shortcode for displaying a single event is %s"
+msgstr ""
+
+#: azrcrv-events.php:1060
+#, php-format
+msgid "The shortcode for displaying multiple events is %s"
+msgstr ""
+
+#: azrcrv-events.php:1077 azrcrv-events.php:1088
+msgid "Widget"
+msgstr ""
+
+#: azrcrv-events.php:1078 azrcrv-events.php:1205
+msgid "Shortcode"
+msgstr ""
+
+#: azrcrv-events.php:1079
+msgid "To Twitter Integration"
+msgstr ""
+
+#: azrcrv-events.php:1094
+msgid "Title"
+msgstr ""
+
+#: azrcrv-events.php:1103
+msgid "Intro Text"
+msgstr ""
+
+#: azrcrv-events.php:1113 azrcrv-events.php:1212
+msgid "Default Category"
+msgstr ""
+
+#: azrcrv-events.php:1142 azrcrv-events.php:1241
+msgid "Width"
+msgstr ""
+
+#: azrcrv-events.php:1151 azrcrv-events.php:1250
+msgid "Height"
+msgstr ""
+
+#: azrcrv-events.php:1160 azrcrv-events.php:1259
+msgid "Limit"
+msgstr ""
+
+#: azrcrv-events.php:1169 azrcrv-events.php:1268
+msgid "Date Format"
+msgstr ""
+
+#: azrcrv-events.php:1179
+msgid "Hide widget?"
+msgstr ""
+
+#: azrcrv-events.php:1186
+msgid "Hide widget when no events found?"
+msgstr ""
+
+#: azrcrv-events.php:1191
+msgid "Hide widget when no events found."
+msgstr ""
+
+#: azrcrv-events.php:1285
+msgid "Enable integration"
+msgstr ""
+
+#: azrcrv-events.php:1291
+#, php-format
+msgid "Enable integration with %s from %s?"
+msgstr ""
+
+#: azrcrv-events.php:1293
+#, php-format
+msgid "%s from %s not installed/activated."
+msgstr ""
+
+#: azrcrv-events.php:1304
+msgid "Tweet"
+msgstr ""
+
+#: azrcrv-events.php:1308
+msgid "Send tweet at below time?"
+msgstr ""
+
+#: azrcrv-events.php:1315
+msgid "Tweet <em>n</em> Days Before"
+msgstr ""
+
+#: azrcrv-events.php:1326 azrcrv-events.php:1359
+msgid "Tweet Time"
+msgstr ""
+
+#: azrcrv-events.php:1337
+msgid "Reweet"
+msgstr ""
+
+#: azrcrv-events.php:1341
+msgid "Send retweet at below time?"
+msgstr ""
+
+#: azrcrv-events.php:1348
+msgid "Retweet <em>n</em> Days Before"
+msgstr ""
+
+#: azrcrv-events.php:1369
+msgid "Retweet Prefix"
+msgstr ""
+
+#: azrcrv-events.php:1378
+msgid "Tweet Format"
+msgstr ""
+
+#: azrcrv-events.php:1388
+msgid "Use Featured Imge"
+msgstr ""
+
+#: azrcrv-events.php:1392
+msgid ""
+"Use featured image? Only three other media images can be included in the "
+"tweet."
+msgstr ""
+
+#: azrcrv-events.php:1402
+msgid "Save Changes"
+msgstr ""
+
+#: azrcrv-events.php:1414
+#, php-format
+msgid "This plugin integrates with the following plugins from %s:"
+msgstr ""
+
+#: azrcrv-events.php:1451
+msgid "You do not have permissions to perform this action"
+msgstr ""
+
+#: azrcrv-events.php:1737
+msgid "Events in a widget"
+msgstr ""
+
+#: azrcrv-events.php:1781
+msgid "Title:"
+msgstr ""
+
+#: azrcrv-events.php:1789
+msgid "Intro Text:"
+msgstr ""
+
+#: azrcrv-events.php:1797
+msgid "Category:"
+msgstr ""
+
+#: azrcrv-events.php:1826
+msgid "Width:"
+msgstr ""
+
+#: azrcrv-events.php:1834
+msgid "Height:"
+msgstr ""
+
+#: azrcrv-events.php:1842
+msgid "Limit:"
+msgstr ""
+
+#: azrcrv-events.php:1850
+msgid "Date Format:"
+msgstr ""
+
+#: azrcrv-events.php:1952 azrcrv-events.php:2144
+#, php-format
+msgid "No %s events found."
+msgstr ""
+
+#: azrcrv-events.php:2075
+#, php-format
+msgid "No events found for category %s"
+msgstr ""
+
+#: libraries/updateclient/UpdateClient.class.php:191
+msgid "Compatible up to:"
+msgstr ""
+
+#: libraries/updateclient/UpdateClient.class.php:192
+msgid "Reviews"
+msgstr ""
+
+#: libraries/updateclient/UpdateClient.class.php:193
+msgid "Read all reviews"
+msgstr ""
+
+#: libraries/updateclient/UpdateClient.class.php:383
+msgid "View details"
+msgstr ""
