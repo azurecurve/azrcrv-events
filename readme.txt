@@ -1,14 +1,15 @@
 === Events ===
 
 Description:	Create events and display in shortcode or widget.
-Version:		1.3.2
+Version:		1.3.3
 Tags:			widget
 Author:			azurecurve
 Author URI:		https://development.azurecurve.co.uk/
 Plugin URI:		https://development.azurecurve.co.uk/classicpress-plugins/events/
-Download link:	https://github.com/azurecurve/azrcrv-events/releases/download/v1.3.2/azrcrv-events.zip
+Download link:	https://github.com/azurecurve/azrcrv-events/releases/download/v1.3.3/azrcrv-events.zip
 Donate link:	https://development.azurecurve.co.uk/support-development/
 Requires PHP:	5.6
+Requires CP:	1.0
 Requires:		1.0.0
 Tested:			4.9.99
 Text Domain:	events
@@ -77,6 +78,9 @@ This plugin is developed for ClassicPress, but will likely work on WordPress.
 
 # Changelog
 
+### [Version 1.3.3](https://github.com/azurecurve/azrcrv-events/releases/tag/v1.3.3)
+ * Update readme file for compatibility with ClassicPress Directory.
+ 
 ### [Version 1.3.2](https://github.com/azurecurve/azrcrv-events/releases/tag/v1.3.2)
  * Update readme files.
  * Update language template.
