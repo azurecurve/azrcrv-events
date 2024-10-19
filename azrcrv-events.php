@@ -3,8 +3,9 @@
  * ------------------------------------------------------------------------------
  * Plugin Name:		Events
  * Description:		Announce holidays, events, achievements and notable historical figures in a widget.
- * Version:			1.3.4
+ * Version:			1.3.5
  * Requires CP:		1.0
+ * Requires PHP: 	7.4
  * Author:			azurecurve
  * Author URI:		https://development.azurecurve.co.uk/classicpress-plugins/
  * Plugin URI:		https://development.azurecurve.co.uk/classicpress-plugins/azrcrv-events/
@@ -905,7 +906,7 @@ function azrcrv_e_perform_tweet_event($cron_type, $post_id){
 	$post_tweet = get_post_meta($post_id, '_azrcrv_e_post_tweet', true);
 	$media_to_use = array();
 	if ($autopost_tweet['use-featured-image'] == 1 AND has_post_thumbnail($post_id)){
-		$post_image = get_the_post_thumbnail_url($post_id, 'full'); ;
+		$post_image = get_the_post_thumbnail_url($post_id, 'full');
 		$media_to_use[] = $post_image;
 	}
 	$post_media = get_post_meta( $post_id, '_azrcrv_e_post_tweet_media', true ); // get tweet content
@@ -1300,7 +1301,7 @@ function azrcrv_e_display_options(){
 								</td>
 							</tr>
 							
-							<? if ($to_twitter_enabled AND $options['to-twitter']['integrate'] == 1){ ?>
+							<?php if ($to_twitter_enabled AND $options['to-twitter']['integrate'] == 1){ ?>
 					
 								<tr>
 									<th scope="row">
@@ -1403,7 +1404,7 @@ function azrcrv_e_display_options(){
 					</div>
 				</div>
 				
-				<input type="submit" value="<? esc_html_e('Save Changes', 'events'); ?>" class="button-primary"/>
+				<input type="submit" value="<?php esc_html_e('Save Changes', 'events'); ?>" class="button-primary"/>
 				
 			</form>
 		</fieldset>
