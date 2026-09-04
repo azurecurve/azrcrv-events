@@ -15,6 +15,9 @@ p.azrcrv-e-dates{
 	font-weight: 700;
 	font-size: 1.2em;
 }
+p.azrcrv-e-location{
+	font-weight: 700;
+}
 p.azrcrv-e-excerpt{
 	font-style: oblique;
 	font-weight: 700;
@@ -35,6 +38,9 @@ h3.azrcrv-e-widget{
 p.azrcrv-e-widget-dates{
 	font-weight: 700;
 	font-size: 1.2em;
+}
+p.azrcrv-e-widget-location{
+	font-weight: 700;
 }
 p.azrcrv-e-widget-excerpt{
 	font-style: oblique;

@@ -1,0 +1,478 @@
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Events 2.0.0\n"
+"POT-Creation-Date: 2026-07-28 00:00+0000\n"
+"PO-Revision-Date: 2026-07-28 00:00+0000\n"
+"Last-Translator: \n"
+"Language-Team: translate@azurecurve.co.uk\n"
+"Language: en_US\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: manual-2.0.0-rebuild\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-KeywordsList: __;_e;esc_html__;esc_html_e;esc_attr__;esc_attr_e\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: includes/functions-list-table.php:33
+msgid "Category"
+msgstr ""
+
+#: includes/functions-list-table.php:34
+msgid "Start Date/Time"
+msgstr ""
+
+#: includes/functions-list-table.php:35
+msgid "End Date/Time"
+msgstr ""
+
+#: includes/functions-list-table.php:36
+msgid "Location"
+msgstr ""
+
+#: includes/functions-menu.php:35 includes/functions-menu.php:51
+msgid "Settings"
+msgstr ""
+
+#: includes/functions-menu.php:50 includes/functions-menu.php:59
+msgid "Events Settings"
+msgstr ""
+
+#: includes/functions-menu.php:60 includes/functions-post-type.php:43
+msgid "Events"
+msgstr ""
+
+#: includes/functions-metabox-event-dates.php:35
+msgid "Event Details"
+msgstr ""
+
+#: includes/functions-metabox-event-dates.php:59
+msgid "Start Date: "
+msgstr ""
+
+#: includes/functions-metabox-event-dates.php:66
+msgid "Start Time: "
+msgstr ""
+
+#: includes/functions-metabox-event-dates.php:73
+msgid "End Time:"
+msgstr ""
+
+#: includes/functions-metabox-event-dates.php:80
+msgid "End Date:"
+msgstr ""
+
+#: includes/functions-metabox-event-dates.php:87
+msgid "Location:"
+msgstr ""
+
+#: includes/functions-metabox-event-dates.php:94
+msgid "For a one day event, do not set an end date."
+msgstr ""
+
+#: includes/functions-metabox-to-x.php:98
+msgid "Post to X"
+msgstr ""
+
+#: includes/functions-metabox-to-x.php:143
+msgid "To regenerate the post text, blank the field and update the post."
+msgstr ""
+
+#: includes/functions-metabox-to-x.php:149
+msgid "Select up to four images to include with the post to X; if the Use Featured Image option is marked and a featured image set, only the first three media images from below will be used."
+msgstr ""
+
+#: includes/functions-metabox-to-x.php:156
+msgid "Upload"
+msgstr ""
+
+#: includes/functions-metabox-to-x.php:157
+msgid "Remove"
+msgstr ""
+
+#: includes/functions-metabox-to-x.php:243
+msgid "X Post History"
+msgstr ""
+
+#: includes/functions-metabox-to-x.php:273
+msgid "Previous Posts"
+msgstr ""
+
+#: includes/functions-metabox-to-x.php:323
+msgid "Autopost to X"
+msgstr ""
+
+#: includes/functions-metabox-to-x.php:364
+msgid "Use featured image as post media image 1?"
+msgstr ""
+
+#: includes/functions-metabox-to-x.php:371
+msgid "Post event to X?"
+msgstr ""
+
+#: includes/functions-metabox-to-x.php:376
+msgid "Post Days Before: "
+msgstr ""
+
+#: includes/functions-metabox-to-x.php:381
+msgid "Post Time: "
+msgstr ""
+
+#: includes/functions-metabox-to-x.php:388
+msgid "Repost event?"
+msgstr ""
+
+#: includes/functions-metabox-to-x.php:393
+msgid "Repost Days Before: "
+msgstr ""
+
+#: includes/functions-metabox-to-x.php:398
+msgid "Repost Time: "
+msgstr ""
+
+#: includes/functions-metabox-to-x.php:403
+msgid "Hashtags"
+msgstr ""
+
+#: includes/functions-post-type.php:27
+msgid "Categories"
+msgstr ""
+
+#: includes/functions-post-type.php:44
+msgid "Event"
+msgstr ""
+
+#: includes/functions-post-type.php:45
+msgid "Add New"
+msgstr ""
+
+#: includes/functions-post-type.php:46
+msgid "Add New Event"
+msgstr ""
+
+#: includes/functions-post-type.php:47
+msgid "Edit"
+msgstr ""
+
+#: includes/functions-post-type.php:48
+msgid "Edit Event"
+msgstr ""
+
+#: includes/functions-post-type.php:49
+msgid "New Event"
+msgstr ""
+
+#: includes/functions-post-type.php:50
+msgid "View"
+msgstr ""
+
+#: includes/functions-post-type.php:51
+msgid "View Event"
+msgstr ""
+
+#: includes/functions-post-type.php:52
+msgid "Search Event"
+msgstr ""
+
+#: includes/functions-post-type.php:53
+msgid "No Event found"
+msgstr ""
+
+#: includes/functions-post-type.php:54
+msgid "No Event found in Trash"
+msgstr ""
+
+#: includes/functions-post-type.php:55
+msgid "Parent Event"
+msgstr ""
+
+#: includes/functions-post-type.php:91
+msgid "Event Outline"
+msgstr ""
+
+#: includes/functions-settings.php:37
+msgid "You do not have sufficient permissions to access this page."
+msgstr ""
+
+#: includes/functions-settings.php:65
+msgid "Settings saved."
+msgstr ""
+
+#: includes/functions-settings.php:66
+msgid "Security check failed - please try again."
+msgstr ""
+
+#: includes/functions-settings.php:102
+msgid "Upcoming Events"
+msgstr ""
+
+#: includes/functions-settings.php:294
+msgid "You do not have permissions to perform this action."
+msgstr ""
+
+#: includes/functions-shortcodes.php:106
+msgid "No events found for category %s"
+msgstr ""
+
+#: includes/functions-shortcodes.php:139 includes/functions-shortcodes.php:149 includes/functions-widget.php:257
+msgid "No %s events found."
+msgstr ""
+
+#: includes/functions-widget.php:75
+msgid "Events by azurecurve"
+msgstr ""
+
+#: includes/functions-widget.php:76
+msgid "Events in a widget"
+msgstr ""
+
+#: includes/functions-widget.php:108
+msgid "Title:"
+msgstr ""
+
+#: includes/functions-widget.php:115
+msgid "Intro Text:"
+msgstr ""
+
+#: includes/functions-widget.php:122
+msgid "Category:"
+msgstr ""
+
+#: includes/functions-widget.php:142
+msgid "Width:"
+msgstr ""
+
+#: includes/functions-widget.php:149
+msgid "Height:"
+msgstr ""
+
+#: includes/functions-widget.php:156
+msgid "Limit:"
+msgstr ""
+
+#: includes/functions-widget.php:163
+msgid "Date Format:"
+msgstr ""
+
+#: includes/tab-instructions.php:19 includes/tabs-output.php:31
+msgid "Instructions"
+msgstr ""
+
+#: includes/tab-instructions.php:21
+msgid "This plugin lets you create events - holidays, webinars, achievements, notable historical figures, or anything else with a start (and optional end) date - and display upcoming ones in a widget or via a shortcode."
+msgstr ""
+
+#: includes/tab-instructions.php:24
+msgid "Add a new Event from the Events menu, and give it a title, an outline (shown as the excerpt), and optionally a body and featured image."
+msgstr ""
+
+#: includes/tab-instructions.php:25
+msgid "Fill in its Event Details in the sidebar metabox - a start date and time are required; only set an end date if the event runs across more than one day. Location is a free-text field and is optional."
+msgstr ""
+
+#: includes/tab-instructions.php:26
+msgid "Optionally assign one or more Categories to the event, so it can be filtered in the widget or shortcode."
+msgstr ""
+
+#: includes/tab-instructions.php:27
+msgid "Publish the event. It will stop appearing in the widget/shortcode output once its end date (or start date, for a one-day event) has passed."
+msgstr ""
+
+#: includes/tab-instructions.php:30 includes/tab-widget.php:24 includes/tabs-output.php:28
+msgid "Widget"
+msgstr ""
+
+#: includes/tab-instructions.php:31
+msgid "Add the Events widget to a sidebar from Appearance > Widgets. Its default title, category, image size, and date format can be set on the Widget tab, and overridden per-widget-instance."
+msgstr ""
+
+#: includes/tab-instructions.php:33
+msgid "Shortcodes"
+msgstr ""
+
+#: includes/tab-instructions.php:35
+msgid "Display a single event by its slug: %s"
+msgstr ""
+
+#: includes/tab-instructions.php:38
+msgid "Display multiple upcoming events, optionally filtered by category: %s"
+msgstr ""
+
+#: includes/tab-instructions.php:41 includes/tabs-output.php:30
+msgid "To X Integration"
+msgstr ""
+
+#: includes/tab-instructions.php:46
+msgid "If %s is installed and active, enable integration on the To X Integration tab to automatically post (and optionally repost) an event a set number of days before it starts. Per-event timing and post text/media can be overridden from the Autopost to X and Post to X boxes shown on each event once integration is enabled."
+msgstr ""
+
+#: includes/tab-instructions.php:52
+msgid "Timezones"
+msgstr ""
+
+#: includes/tab-instructions.php:53
+msgid "All \"is this event over yet\" checks and scheduled post/repost times use your site\\'s configured timezone (Settings > General > Timezone), not the timezone of the server itself."
+msgstr ""
+
+#: includes/tab-other-plugins.php:41
+msgid "Other Plugins"
+msgstr ""
+
+#: includes/tab-other-plugins.php:50
+msgid "%1$s was one of the first plugin developers to start developing for ClassicPress; all plugins are available from %2$s and are integrated with the %3$s plugin for fully integrated, no hassle, updates."
+msgstr ""
+
+#: includes/tab-other-plugins.php:53
+msgid "Other plugins available from %s, which you are not using, are:"
+msgstr ""
+
+#: includes/tab-shortcode.php:24 includes/tabs-output.php:29
+msgid "Shortcode"
+msgstr ""
+
+#: includes/tab-shortcode.php:28 includes/tab-widget.php:42
+msgid "Default Category"
+msgstr ""
+
+#: includes/tab-shortcode.php:48 includes/tab-widget.php:62
+msgid "Width"
+msgstr ""
+
+#: includes/tab-shortcode.php:55 includes/tab-widget.php:69
+msgid "Height"
+msgstr ""
+
+#: includes/tab-shortcode.php:62 includes/tab-widget.php:76
+msgid "Limit"
+msgstr ""
+
+#: includes/tab-shortcode.php:69 includes/tab-widget.php:83
+msgid "Date Format"
+msgstr ""
+
+#: includes/tab-to-x.php:25
+msgid "Enable integration"
+msgstr ""
+
+#: includes/tab-to-x.php:33
+msgid "Enable integration with %1$s from %2$s?"
+msgstr ""
+
+#: includes/tab-to-x.php:43
+msgid "%1$s from %2$s not installed/activated."
+msgstr ""
+
+#: includes/tab-to-x.php:55
+msgid "Post"
+msgstr ""
+
+#: includes/tab-to-x.php:59
+msgid "Post to X at below time?"
+msgstr ""
+
+#: includes/tab-to-x.php:65
+msgid "Post n Days Before"
+msgstr ""
+
+#: includes/tab-to-x.php:72
+msgid "Post Time"
+msgstr ""
+
+#: includes/tab-to-x.php:79
+msgid "Repost"
+msgstr ""
+
+#: includes/tab-to-x.php:83
+msgid "Send repost at below time?"
+msgstr ""
+
+#: includes/tab-to-x.php:89
+msgid "Repost n Days Before"
+msgstr ""
+
+#: includes/tab-to-x.php:96
+msgid "Repost Time"
+msgstr ""
+
+#: includes/tab-to-x.php:103
+msgid "Repost Prefix"
+msgstr ""
+
+#: includes/tab-to-x.php:110
+msgid "Post Format"
+msgstr ""
+
+#: includes/tab-to-x.php:113
+msgid "Use %t for the event title and %h for hashtags."
+msgstr ""
+
+#: includes/tab-to-x.php:118
+msgid "Use Featured Image"
+msgstr ""
+
+#: includes/tab-to-x.php:122
+msgid "Use featured image? Only three other media images can be included in the post."
+msgstr ""
+
+#: includes/tab-widget.php:28
+msgid "Title"
+msgstr ""
+
+#: includes/tab-widget.php:35
+msgid "Intro Text"
+msgstr ""
+
+#: includes/tab-widget.php:90
+msgid "Hide widget?"
+msgstr ""
+
+#: includes/tab-widget.php:93
+msgid "Hide widget when no events found?"
+msgstr ""
+
+#: includes/tab-widget.php:96
+msgid "Hide widget when no events found."
+msgstr ""
+
+#: includes/tab-widget.php:103
+msgid "General"
+msgstr ""
+
+#: includes/tab-widget.php:107
+msgid "Delete event data on uninstall?"
+msgstr ""
+
+#: includes/tab-widget.php:110
+msgid "Delete all event posts and their metadata when this plugin is uninstalled?"
+msgstr ""
+
+#: includes/tab-widget.php:113
+msgid "Delete all event posts and their metadata when this plugin is uninstalled. Leave unchecked to keep your events if you uninstall the plugin. Any pending posts/reposts to X are always cleared on uninstall regardless of this setting."
+msgstr ""
+
+#: includes/tabs-output.php:62
+msgid "Events allows events to be created and displayed in a widget or using a shortcode."
+msgstr ""
+
+#: includes/tabs-output.php:65
+msgid "The shortcode for displaying a single event is %s"
+msgstr ""
+
+#: includes/tabs-output.php:68
+msgid "The shortcode for displaying multiple events is %s"
+msgstr ""
+
+#: includes/tabs-output.php:121
+msgid "Save Changes"
+msgstr ""
+
+#: includes/tabs-output.php:130
+msgid "Support"
+msgstr ""
+
+#: includes/tabs-output.php:139
+msgid "You can help support the development of our free plugins by donating a small amount of money."
+msgstr ""
+
