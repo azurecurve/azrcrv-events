@@ -60,7 +60,11 @@ Not unless you've explicitly opted in via the "Delete event data on uninstall" c
 
 ## Changelog
 
-### Version 2.0.0
+### [Version 2.0.1](https://github.com/azurecurve/azrcrv-events/releases/tag/v2.0.1)
+
+* Update settings page and instructions to clarify purpose of fields.
+
+### [Version 2.0.0](https://github.com/azurecurve/azrcrv-events/releases/tag/v2.0.0)
 
 * Rebuilt on azurecurve's current, modular plugin pattern (namespaced, split across includes/ files, shared cross-plugin admin menu and tabs component).
 * Replaced all jQuery with vanilla JavaScript.

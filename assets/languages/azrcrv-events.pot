@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Events 2.0.0\n"
-"POT-Creation-Date: 2026-07-28 00:00+0000\n"
+"POT-Creation-Date: 2026-09-04 11:59+0100\n"
 "PO-Revision-Date: 2026-07-28 00:00+0000\n"
 "Last-Translator: \n"
 "Language-Team: translate@azurecurve.co.uk\n"
@@ -11,10 +11,47 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: manual-2.0.0-rebuild\n"
-"X-Poedit-Basepath: ..\n"
+"X-Generator: Poedit 3.9\n"
+"X-Poedit-Basepath: ../..\n"
 "X-Poedit-KeywordsList: __;_e;esc_html__;esc_html_e;esc_attr__;esc_attr_e\n"
-"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPath-0: assets\n"
+"X-Poedit-SearchPath-1: .\n"
+
+#: includes/azurecurve-menu-display.php:61
+msgid "Active Plugins"
+msgstr ""
+
+#: includes/azurecurve-menu-display.php:94 includes/tab-other-plugins.php:50
+#, php-format
+msgid "%1$s was one of the first plugin developers to start developing for ClassicPress; all plugins are available from %2$s and are integrated with the %3$s plugin for fully integrated, no hassle, updates."
+msgstr ""
+
+#: includes/azurecurve-menu-display.php:97
+#, php-format
+msgid "The %s plugins active on your site are:"
+msgstr ""
+
+#: includes/azurecurve-menu-display.php:115
+msgid "Other Available Plugins"
+msgstr ""
+
+#: includes/azurecurve-menu-display.php:141
+#, php-format
+msgid "Congratulations! You're using all of the %s plugins."
+msgstr ""
+
+#: includes/azurecurve-menu-display.php:153
+#, php-format
+msgid "The other plugins available from %s are:"
+msgstr ""
+
+#: includes/azurecurve-menu-tabs-output.php:57 includes/tabs-output.php:116
+msgid "Support"
+msgstr ""
+
+#: includes/azurecurve-menu-tabs-output.php:68 includes/tabs-output.php:125
+msgid "You can help support the development of our free plugins by donating a small amount of money."
+msgstr ""
 
 #: includes/functions-list-table.php:33
 msgid "Category"
@@ -70,70 +107,6 @@ msgstr ""
 
 #: includes/functions-metabox-event-dates.php:94
 msgid "For a one day event, do not set an end date."
-msgstr ""
-
-#: includes/functions-metabox-to-x.php:98
-msgid "Post to X"
-msgstr ""
-
-#: includes/functions-metabox-to-x.php:143
-msgid "To regenerate the post text, blank the field and update the post."
-msgstr ""
-
-#: includes/functions-metabox-to-x.php:149
-msgid "Select up to four images to include with the post to X; if the Use Featured Image option is marked and a featured image set, only the first three media images from below will be used."
-msgstr ""
-
-#: includes/functions-metabox-to-x.php:156
-msgid "Upload"
-msgstr ""
-
-#: includes/functions-metabox-to-x.php:157
-msgid "Remove"
-msgstr ""
-
-#: includes/functions-metabox-to-x.php:243
-msgid "X Post History"
-msgstr ""
-
-#: includes/functions-metabox-to-x.php:273
-msgid "Previous Posts"
-msgstr ""
-
-#: includes/functions-metabox-to-x.php:323
-msgid "Autopost to X"
-msgstr ""
-
-#: includes/functions-metabox-to-x.php:364
-msgid "Use featured image as post media image 1?"
-msgstr ""
-
-#: includes/functions-metabox-to-x.php:371
-msgid "Post event to X?"
-msgstr ""
-
-#: includes/functions-metabox-to-x.php:376
-msgid "Post Days Before: "
-msgstr ""
-
-#: includes/functions-metabox-to-x.php:381
-msgid "Post Time: "
-msgstr ""
-
-#: includes/functions-metabox-to-x.php:388
-msgid "Repost event?"
-msgstr ""
-
-#: includes/functions-metabox-to-x.php:393
-msgid "Repost Days Before: "
-msgstr ""
-
-#: includes/functions-metabox-to-x.php:398
-msgid "Repost Time: "
-msgstr ""
-
-#: includes/functions-metabox-to-x.php:403
-msgid "Hashtags"
 msgstr ""
 
 #: includes/functions-post-type.php:27
@@ -192,31 +165,34 @@ msgstr ""
 msgid "Event Outline"
 msgstr ""
 
-#: includes/functions-settings.php:37
+#: includes/functions-settings.php:31
 msgid "You do not have sufficient permissions to access this page."
 msgstr ""
 
-#: includes/functions-settings.php:65
+#: includes/functions-settings.php:59
 msgid "Settings saved."
 msgstr ""
 
-#: includes/functions-settings.php:66
+#: includes/functions-settings.php:60
 msgid "Security check failed - please try again."
 msgstr ""
 
-#: includes/functions-settings.php:102
+#: includes/functions-settings.php:96
 msgid "Upcoming Events"
 msgstr ""
 
-#: includes/functions-settings.php:294
+#: includes/functions-settings.php:214
 msgid "You do not have permissions to perform this action."
 msgstr ""
 
-#: includes/functions-shortcodes.php:106
+#: includes/functions-shortcodes.php:110
+#, php-format
 msgid "No events found for category %s"
 msgstr ""
 
-#: includes/functions-shortcodes.php:139 includes/functions-shortcodes.php:149 includes/functions-widget.php:257
+#: includes/functions-shortcodes.php:143 includes/functions-shortcodes.php:153
+#: includes/functions-widget.php:262
+#, php-format
 msgid "No %s events found."
 msgstr ""
 
@@ -256,7 +232,7 @@ msgstr ""
 msgid "Date Format:"
 msgstr ""
 
-#: includes/tab-instructions.php:19 includes/tabs-output.php:31
+#: includes/tab-instructions.php:19 includes/tabs-output.php:30
 msgid "Instructions"
 msgstr ""
 
@@ -280,7 +256,8 @@ msgstr ""
 msgid "Publish the event. It will stop appearing in the widget/shortcode output once its end date (or start date, for a one-day event) has passed."
 msgstr ""
 
-#: includes/tab-instructions.php:30 includes/tab-widget.php:24 includes/tabs-output.php:28
+#: includes/tab-instructions.php:30 includes/tab-widget.php:24
+#: includes/tabs-output.php:28
 msgid "Widget"
 msgstr ""
 
@@ -293,38 +270,29 @@ msgid "Shortcodes"
 msgstr ""
 
 #: includes/tab-instructions.php:35
+#, php-format
 msgid "Display a single event by its slug: %s"
 msgstr ""
 
 #: includes/tab-instructions.php:38
+#, php-format
 msgid "Display multiple upcoming events, optionally filtered by category: %s"
 msgstr ""
 
-#: includes/tab-instructions.php:41 includes/tabs-output.php:30
-msgid "To X Integration"
-msgstr ""
-
-#: includes/tab-instructions.php:46
-msgid "If %s is installed and active, enable integration on the To X Integration tab to automatically post (and optionally repost) an event a set number of days before it starts. Per-event timing and post text/media can be overridden from the Autopost to X and Post to X boxes shown on each event once integration is enabled."
-msgstr ""
-
-#: includes/tab-instructions.php:52
+#: includes/tab-instructions.php:41
 msgid "Timezones"
 msgstr ""
 
-#: includes/tab-instructions.php:53
-msgid "All \"is this event over yet\" checks and scheduled post/repost times use your site\\'s configured timezone (Settings > General > Timezone), not the timezone of the server itself."
+#: includes/tab-instructions.php:42
+msgid "All \"is this event over yet\" checks use your site's configured timezone (Settings > General > Timezone), not the timezone of the server itself."
 msgstr ""
 
 #: includes/tab-other-plugins.php:41
 msgid "Other Plugins"
 msgstr ""
 
-#: includes/tab-other-plugins.php:50
-msgid "%1$s was one of the first plugin developers to start developing for ClassicPress; all plugins are available from %2$s and are integrated with the %3$s plugin for fully integrated, no hassle, updates."
-msgstr ""
-
 #: includes/tab-other-plugins.php:53
+#, php-format
 msgid "Other plugins available from %s, which you are not using, are:"
 msgstr ""
 
@@ -332,147 +300,124 @@ msgstr ""
 msgid "Shortcode"
 msgstr ""
 
-#: includes/tab-shortcode.php:28 includes/tab-widget.php:42
+#: includes/tab-shortcode.php:28 includes/tab-widget.php:44
 msgid "Default Category"
 msgstr ""
 
-#: includes/tab-shortcode.php:48 includes/tab-widget.php:62
-msgid "Width"
+#: includes/tab-shortcode.php:44
+msgid "Default category for shortcodes."
 msgstr ""
 
-#: includes/tab-shortcode.php:55 includes/tab-widget.php:69
-msgid "Height"
+#: includes/tab-shortcode.php:49 includes/tab-widget.php:65
+msgid "Image Width"
 msgstr ""
 
-#: includes/tab-shortcode.php:62 includes/tab-widget.php:76
+#: includes/tab-shortcode.php:52 includes/tab-widget.php:68
+msgid "Default image width in pixels."
+msgstr ""
+
+#: includes/tab-shortcode.php:57 includes/tab-widget.php:73
+msgid "Image Height"
+msgstr ""
+
+#: includes/tab-shortcode.php:60 includes/tab-widget.php:76
+msgid "Default image height in pixels."
+msgstr ""
+
+#: includes/tab-shortcode.php:66 includes/tab-widget.php:81
 msgid "Limit"
 msgstr ""
 
-#: includes/tab-shortcode.php:69 includes/tab-widget.php:83
+#: includes/tab-shortcode.php:69 includes/tab-widget.php:84
+msgid "Default number of events to display."
+msgstr ""
+
+#: includes/tab-shortcode.php:74 includes/tab-widget.php:89
 msgid "Date Format"
 msgstr ""
 
-#: includes/tab-to-x.php:25
-msgid "Enable integration"
-msgstr ""
-
-#: includes/tab-to-x.php:33
-msgid "Enable integration with %1$s from %2$s?"
-msgstr ""
-
-#: includes/tab-to-x.php:43
-msgid "%1$s from %2$s not installed/activated."
-msgstr ""
-
-#: includes/tab-to-x.php:55
-msgid "Post"
-msgstr ""
-
-#: includes/tab-to-x.php:59
-msgid "Post to X at below time?"
-msgstr ""
-
-#: includes/tab-to-x.php:65
-msgid "Post n Days Before"
-msgstr ""
-
-#: includes/tab-to-x.php:72
-msgid "Post Time"
-msgstr ""
-
-#: includes/tab-to-x.php:79
-msgid "Repost"
-msgstr ""
-
-#: includes/tab-to-x.php:83
-msgid "Send repost at below time?"
-msgstr ""
-
-#: includes/tab-to-x.php:89
-msgid "Repost n Days Before"
-msgstr ""
-
-#: includes/tab-to-x.php:96
-msgid "Repost Time"
-msgstr ""
-
-#: includes/tab-to-x.php:103
-msgid "Repost Prefix"
-msgstr ""
-
-#: includes/tab-to-x.php:110
-msgid "Post Format"
-msgstr ""
-
-#: includes/tab-to-x.php:113
-msgid "Use %t for the event title and %h for hashtags."
-msgstr ""
-
-#: includes/tab-to-x.php:118
-msgid "Use Featured Image"
-msgstr ""
-
-#: includes/tab-to-x.php:122
-msgid "Use featured image? Only three other media images can be included in the post."
+#: includes/tab-shortcode.php:77 includes/tab-widget.php:92
+msgid "Default date format applied to new widgets."
 msgstr ""
 
 #: includes/tab-widget.php:28
 msgid "Title"
 msgstr ""
 
-#: includes/tab-widget.php:35
+#: includes/tab-widget.php:31
+msgid "Default title for new widgets."
+msgstr ""
+
+#: includes/tab-widget.php:36
 msgid "Intro Text"
 msgstr ""
 
-#: includes/tab-widget.php:90
+#: includes/tab-widget.php:39
+msgid "Default intro text for new widgets."
+msgstr ""
+
+#: includes/tab-widget.php:60
+msgid "Default category for new widgets."
+msgstr ""
+
+#: includes/tab-widget.php:97
 msgid "Hide widget?"
 msgstr ""
 
-#: includes/tab-widget.php:93
+#: includes/tab-widget.php:100
 msgid "Hide widget when no events found?"
 msgstr ""
 
-#: includes/tab-widget.php:96
+#: includes/tab-widget.php:103
 msgid "Hide widget when no events found."
 msgstr ""
 
-#: includes/tab-widget.php:103
+#: includes/tab-widget.php:110
 msgid "General"
 msgstr ""
 
-#: includes/tab-widget.php:107
+#: includes/tab-widget.php:114
 msgid "Delete event data on uninstall?"
 msgstr ""
 
-#: includes/tab-widget.php:110
+#: includes/tab-widget.php:117
 msgid "Delete all event posts and their metadata when this plugin is uninstalled?"
 msgstr ""
 
-#: includes/tab-widget.php:113
-msgid "Delete all event posts and their metadata when this plugin is uninstalled. Leave unchecked to keep your events if you uninstall the plugin. Any pending posts/reposts to X are always cleared on uninstall regardless of this setting."
+#: includes/tab-widget.php:120
+msgid "Delete all event posts and their metadata when this plugin is uninstalled. Leave unchecked to keep your events if you uninstall the plugin."
 msgstr ""
 
-#: includes/tabs-output.php:62
+#: includes/tabs-output.php:57
 msgid "Events allows events to be created and displayed in a widget or using a shortcode."
 msgstr ""
 
-#: includes/tabs-output.php:65
+#: includes/tabs-output.php:60
+#, php-format
 msgid "The shortcode for displaying a single event is %s"
 msgstr ""
 
-#: includes/tabs-output.php:68
+#: includes/tabs-output.php:63
+#, php-format
 msgid "The shortcode for displaying multiple events is %s"
 msgstr ""
 
-#: includes/tabs-output.php:121
+#: includes/tabs-output.php:107
 msgid "Save Changes"
 msgstr ""
 
-#: includes/tabs-output.php:130
-msgid "Support"
+#: libraries/updateclient/UpdateClient.class.php:203
+msgid "Compatible up to:"
 msgstr ""
 
-#: includes/tabs-output.php:139
-msgid "You can help support the development of our free plugins by donating a small amount of money."
+#: libraries/updateclient/UpdateClient.class.php:203
+msgid "Reviews"
 msgstr ""
 
+#: libraries/updateclient/UpdateClient.class.php:203
+msgid "Read all reviews"
+msgstr ""
+
+#: libraries/updateclient/UpdateClient.class.php:400
+msgid "View details"
+msgstr ""

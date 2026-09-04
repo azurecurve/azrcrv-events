@@ -28,6 +28,7 @@ $settings = get_settings();
 		<th scope="row"><label for="widget-title"><?php esc_html_e( 'Title', 'azrcrv-e' ); ?></label></th>
 		<td>
 			<input name="widget-title" type="text" id="widget-title" value="<?php echo esc_attr( $settings['widget']['title'] ); ?>" class="regular-text" />
+			<p class="description"><?php esc_html_e( 'Default title for new widgets.', 'azrcrv-e' ); ?></p>
 		</td>
 	</tr>
 
@@ -35,6 +36,7 @@ $settings = get_settings();
 		<th scope="row"><label for="widget-intro-text"><?php esc_html_e( 'Intro Text', 'azrcrv-e' ); ?></label></th>
 		<td>
 			<input name="widget-intro-text" type="text" id="widget-intro-text" value="<?php echo esc_attr( $settings['widget']['intro-text'] ); ?>" class="large-text" />
+			<p class="description"><?php esc_html_e( 'Default intro text for new widgets.', 'azrcrv-e' ); ?></p>
 		</td>
 	</tr>
 
@@ -55,20 +57,23 @@ $settings = get_settings();
 				}
 				?>
 			</select>
+			<p class="description"><?php esc_html_e( 'Default category for new widgets.', 'azrcrv-e' ); ?></p>
 		</td>
 	</tr>
 
 	<tr>
-		<th scope="row"><label for="widget-width"><?php esc_html_e( 'Width', 'azrcrv-e' ); ?></label></th>
+		<th scope="row"><label for="widget-width"><?php esc_html_e( 'Image Width', 'azrcrv-e' ); ?></label></th>
 		<td>
 			<input name="widget-width" type="number" min="1" id="widget-width" value="<?php echo esc_attr( $settings['widget']['width'] ); ?>" class="small-text" />
+			<p class="description"><?php esc_html_e( 'Default image width in pixels.', 'azrcrv-e' ); ?></p>
 		</td>
 	</tr>
 
 	<tr>
-		<th scope="row"><label for="widget-height"><?php esc_html_e( 'Height', 'azrcrv-e' ); ?></label></th>
+		<th scope="row"><label for="widget-height"><?php esc_html_e( 'Image Height', 'azrcrv-e' ); ?></label></th>
 		<td>
 			<input name="widget-height" type="number" min="1" id="widget-height" value="<?php echo esc_attr( $settings['widget']['height'] ); ?>" class="small-text" />
+			<p class="description"><?php esc_html_e( 'Default image height in pixels.', 'azrcrv-e' ); ?></p>
 		</td>
 	</tr>
 
@@ -76,6 +81,7 @@ $settings = get_settings();
 		<th scope="row"><label for="widget-limit"><?php esc_html_e( 'Limit', 'azrcrv-e' ); ?></label></th>
 		<td>
 			<input name="widget-limit" type="number" min="1" id="widget-limit" value="<?php echo esc_attr( $settings['widget']['limit'] ); ?>" class="small-text" />
+			<p class="description"><?php esc_html_e( 'Default number of events to display.', 'azrcrv-e' ); ?></p>
 		</td>
 	</tr>
 
@@ -83,6 +89,7 @@ $settings = get_settings();
 		<th scope="row"><label for="widget-date-format"><?php esc_html_e( 'Date Format', 'azrcrv-e' ); ?></label></th>
 		<td>
 			<input name="widget-date-format" type="text" id="widget-date-format" value="<?php echo esc_attr( $settings['widget']['date-format'] ); ?>" class="short-text" />
+			<p class="description"><?php esc_html_e( 'Default date format applied to new widgets.', 'azrcrv-e' ); ?></p>
 		</td>
 	</tr>
 
