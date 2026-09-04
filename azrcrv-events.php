@@ -2,7 +2,7 @@
 /**
  * ------------------------------------------------------------------------------
  * Plugin Name:		Events
- * Description:		Announce holidays, events, achievements and notable historical figures in a widget.
+ * Description:		Create events and display in shortcode or widget.
  * Version:			2.0.0
  * Requires CP:		1.0
  * Requires PHP:	8.2
